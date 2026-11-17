@@ -7,6 +7,7 @@ import imaging from '../assets/images/projects/plant-cell-image-analysis.png';
 import inpainting from '../assets/images/projects/leaf-inpainting.png';
 import rag from '../assets/images/projects/bio-rag-assistant.png';
 import rnaseq from '../assets/images/projects/rnaseq-agent.png';
+import avatarPhoto from '../assets/images/PF.jpeg';
 
 const GITHUB_USER = 'liuweisu';
 const repo = (name: string) => `https://github.com/${GITHUB_USER}/${name}`;
@@ -16,7 +17,7 @@ export const profile = {
   name: 'Liu Wei Su', // TODO: your full name
   headline: 'Bioinformatician with expertise in genomics, Image analysis and AI engineering',
   // avatar: `https://github.com/${GITHUB_USER}.png`,
-  avatar: `/workspaces/liuweisu.github.io/src/data/PF.jpeg`,
+  avatar: avatarPhoto,
   github: `https://github.com/${GITHUB_USER}`,
   linkedin: 'https://www.linkedin.com/in/liu-wei-su-199784238/', // TODO: your LinkedIn URL, or leave empty to hide the icon
   intro:
