@@ -13,14 +13,15 @@ const repo = (name: string) => `https://github.com/${GITHUB_USER}/${name}`;
 const pages = (name: string) => `https://${GITHUB_USER}.github.io/${name}/`;
 
 export const profile = {
-  name: 'liuweisu', // TODO: your full name
-  headline: 'Bioinformatician · Image analysis · AI engineering',
-  avatar: `https://github.com/${GITHUB_USER}.png`,
+  name: 'Liu Wei Su', // TODO: your full name
+  headline: 'Bioinformatician with expertise in genomics, Image analysis and AI engineering',
+  // avatar: `https://github.com/${GITHUB_USER}.png`,
+  avatar: `/workspaces/liuweisu.github.io/src/data/PF.jpeg`,
   github: `https://github.com/${GITHUB_USER}`,
-  linkedin: '', // TODO: your LinkedIn URL, or leave empty to hide the icon
+  linkedin: 'https://www.linkedin.com/in/liu-wei-su-199784238/', // TODO: your LinkedIn URL, or leave empty to hide the icon
   intro:
-    'I work where genomics, plant science and machine learning meet: genome assembly and transposable elements, ' +
-    'image analysis and inpainting of plant images, and LLM systems that are tested before they are trusted.',
+    'I work on genomics, plant science and machine learning: genome assembly and transposable elements, ' +
+    'image analysis and inpainting of plant images, and even testing deep learning algorithms.',
 };
 
 export type Skill = { icon: 'dna' | 'image' | 'robot'; title: string; text: string; tags: string[] };
@@ -32,7 +33,7 @@ export const skills: Skill[] = [
     text:
       'Genome assembly and quality assessment, transposable element annotation in plant, human and bacterial genomes, ' +
       'RNA-seq differential expression and proteomics, always checked against data with a known answer.',
-    tags: ['Python', 'Genome assembly', 'Transposable elements', 'EDTA', 'EarlGrey', 'RNA-seq', 'DESeq2', 'Proteomics', 'Nanopore / 16S', 'SQL'],
+    tags: ['Python', 'Genome assembly', 'Transposable elements', 'RNA-seq', 'DESeq2', 'Proteomics', 'Nanopore', 'Illumina', '16S', 'SQL'],
   },
   {
     icon: 'image',
@@ -40,15 +41,15 @@ export const skills: Skill[] = [
     text:
       'Segmentation and measurement of leaves and cells, disease severity scoring, and restoring damaged leaves with ' +
       'classical and generative inpainting, evaluated on the traits a biologist actually measures.',
-    tags: ['scikit-image', 'OpenCV', 'NumPy / SciPy', 'PyTorch', 'Diffusion models', 'LaMa', 'SAM', 'U-Net'],
+    tags: ['scikit-image', 'OpenCV', 'NumPy / SciPy', 'PyTorch', 'Diffusion models', 'Foundation Models', 'Quantitative analysis', 'LaMa', 'SAM', 'U-Net'],
   },
   {
     icon: 'robot',
     title: 'AI engineering',
     text:
-      'Retrieval-augmented generation with citations, tool-using agents, evaluation sets that include trap questions, ' +
-      'and the plumbing around them: APIs, containers, tests and CI.',
-    tags: ['RAG', 'LLM agents', 'Claude API', 'Ollama', 'FastAPI', 'Docker', 'GitHub Actions', 'pytest'],
+      'Retrieval-augmented generation with citations, tool-using agents, and evaluation sets ' +
+      ': APIs, containers, tests.',
+    tags: ['RAG', 'LLM agents', 'Ollama', 'GitHub Actions', 'pytest'],
   },
 ];
 
@@ -56,16 +57,45 @@ export type TimelineItem = { date: string; title: string; place: string; text: s
 
 export const timeline: TimelineItem[] = [
   {
-    date: 'TODO: years',
-    title: 'MSc — TODO: programme',
-    place: 'TODO: university',
-    text: 'Thesis: generative inpainting models to restore damaged leaves in plant images, and where they produce convincing but wrong leaf shapes.',
+    date: 'Mar 2026 - Aug 2026',
+    title: 'Internship, computational biology',
+    place: 'Rijk Zwaan, Fijnaart',
+    text: 'Thesis: Pangenomic detection of recently active transposable elements in melon: reproducible Snakemake workflows on HPC that benchmark detection pipelines across 25 genome assemblies.',
   },
   {
-    date: 'TODO: years',
-    title: 'Minor — databases',
-    place: 'TODO: university',
-    text: 'Designed a relational database from scratch, modelled its relations and extracted information with SQL.',
+    date: 'Sep 2025 - Feb 2026',
+    title: 'MSc thesis, Bioinformatics chair group',
+    place: 'Wageningen University & Research, Wageningen',
+    text: 'Quantify caterpillar-induced leaf damage using deep learning algorithms and restore heavily damaged leaves with inpainting models.',
+  },
+  {
+    date: 'Sep 2024 - Aug 2026',
+    title: 'MSc Bioinformatics and Systems Biology',
+    place: 'Wageningen University & Research',
+    text: 'Learned genomics, plant sciences, and specialized in machine-and deep learning. Also received consultancy training and worked in a multidisciplinary team.',
+  },
+  {
+    date: 'Dec 2023',
+    title: 'Junior Med School practical lab assistant',
+    place: 'Erasmus MC, Rotterdam',
+    text: 'Teaching junior med school students how to perform a luciferase assay and how aseptic techniques for cell culture.',
+  },
+  {
+    date: 'Sep 2023 - Jun 2024',
+    title: 'Research internship, preclinical drug research',
+    place: 'Erasmus MC, Rotterdam',
+    text: 'Developed and optimised biosensor assays to evaluate therapeutic compounds for thyroid disease, using cell culture, molecular cloning and transfections.',
+  },
+  {
+    date: 'May 8 2023 - May 10 2023',
+    title: 'Volunteer at the BioSB',
+    place: 'Egmond aan Zee',
+  },
+  {
+    date: 'Aug 2020 - Jul 2024',
+    title: 'BSc Biology and Medical Laboratory Research',
+    place: 'Avans University of Applied Sciences, Breda',
+    text: 'Specialisation biotechnology, minor bioinformatics.',
   },
 ];
 
@@ -93,7 +123,7 @@ export const projects: Project[] = [
     title: 'leaf-inpainting',
     description:
       'Restoring insect bites, holes and tears in leaf images with five inpainting methods, two written from scratch. ' +
-      'A leaf-shape metric shows what PSNR and SSIM miss: exemplar inpainting restores bitten margins best (shape IoU 0.89 vs 0.60–0.72).',
+      'Exemplar inpainting restores bitten margins best (shape IoU 0.89 vs 0.60-0.72).',
     image: inpainting,
     repo: repo('leaf-inpainting'),
     demo: pages('leaf-inpainting'),
