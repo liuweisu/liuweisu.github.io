@@ -11,7 +11,7 @@ function Demos() {
   return (
     <div className="demos-container" id="demos">
       <h1>Try it</h1>
-      <p className="demos-lead">Every demo below runs the project's own code in your browser. Nothing is uploaded.</p>
+      <p className="demos-lead">Every demo below runs the showcase code in your browser; nothing is uploaded. These are rebuilt versions of my WUR work, not the original code.</p>
       <div className="demo-tabs" role="tablist">
         {demos.map((d, i) => (
           <button key={d.url} role="tab" aria-selected={i === active} className={i === active ? 'active' : ''} onClick={() => setActive(i)}>
