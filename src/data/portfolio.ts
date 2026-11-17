@@ -109,6 +109,16 @@ export type Project = {
   tags: string[];
 };
 
+// Shown above the project cards and under the "Try it" demos.
+export const projectsNote = {
+  title: 'About these repositories',
+  text:
+    'The projects below are compact showcases of work I did during my studies at Wageningen University & Research (WUR). ' +
+    'The original research and course code lives on WUR\'s internal GitLab and is not public. ' +
+    'The code in these repositories was rebuilt quickly with help from Claude, an AI assistant, to show the methods and results; ' +
+    'it is not the original thesis or course code.',
+};
+
 export const projects: Project[] = [
   {
     title: 'bioseq-toolkit',

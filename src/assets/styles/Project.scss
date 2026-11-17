@@ -83,3 +83,21 @@
   object-position: top;
   border: 1px solid rgba(127, 127, 127, 0.25);
 }
+
+.projects-note {
+  margin: 0 0 40px;
+  padding: 14px 18px;
+  border-left: 4px solid #5000ca;
+  border-radius: 6px;
+  background: rgba(127, 127, 127, 0.12);
+  color: #c9d1d9;
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 900px;
+
+  strong { color: inherit; }
+}
+
+.light-mode .projects-note {
+  color: #333a40;
+}
