@@ -90,6 +90,7 @@ export const timeline: TimelineItem[] = [
     date: 'May 8 2023 - May 10 2023',
     title: 'Volunteer at the BioSB',
     place: 'Egmond aan Zee',
+    text: '',
   },
   {
     date: 'Aug 2020 - Jul 2024',
